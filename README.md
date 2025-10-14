@@ -18,9 +18,9 @@ This project was made possible by the sourcemaps **publicly** available [here](h
 ---
 Roadmap:
 
-- [ ] Account register/login
-- [ ] JWT Token
-- [ ] Characters list, creation, deletion
+- [x] Account register/login
+- [x] JWT Token
+- [x] Characters list, creation, deletion
 - [ ] Socket initialization, send paths, player, globals, group data, and shine info on connect
 - [ ] Game chat with message history
 - [ ] Socket Events:
