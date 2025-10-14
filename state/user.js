@@ -1,17 +1,17 @@
-import { dirname, join } from "node:path";
-import { fileURLToPath } from "node:url";
-import crypto from "crypto";
-import fsSync from "fs";
-import fs from "fs/promises";
+import { dirname, join } from "node:path"
+import { fileURLToPath } from "node:url"
+import crypto from "crypto"
+import fsSync from "fs"
+import fs from "fs/promises"
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
 const user = {
-	register: async (username, password) => {
-		const usersPath = join(__dirname, "../db/users.json");
+	register: async (username, password, email) => {
+		const usersPath = join(__dirname, "../db/users.json")
 
-		const data = await fs.readFile(usersPath, "utf8");
-		const users = JSON.parse(data);
+		const data = await fs.readFile(usersPath, "utf8")
+		const users = JSON.parse(data)
 
 		const info = {
 			id: users.length + 1,
@@ -19,38 +19,67 @@ const user = {
 			email,
 			password: crypto.createHash("md5").update(password).digest("hex"),
 			registered_at: new Date().toISOString(),
-		};
+		}
 
-		users.push(info);
+		users.push(info)
 
-		await fs.writeFile(usersPath, JSON.stringify(users, null, 2), "utf8");
+		await fs.writeFile(usersPath, JSON.stringify(users, null, 2), "utf8")
 
-		return info;
+		return info
 	},
 
 	reset: async (data) => {
-		const templatePath = join(__dirname, "../db/template.json");
-		const templateData = await fs.readFile(templatePath, "utf-8");
-		const template = JSON.parse(templateData);
+		const templatePath = join(__dirname, "../db/user.template.json")
+		const templateData = await fs.readFile(templatePath, "utf-8")
+		const template = JSON.parse(templateData)
 
-		template.id = data.id;
-		template.accountId = data.id;
-		template.username = data.username;
-		template.created = data.registered_at;
-		template.email = data.email || ""; // optional
-		template.combatStats.name = data.username;
-		template.combatStats.player = data.id;
+		template.id = data.id
+		template.accountId = data.id
+		template.username = data.username
+		template.created = data.registered_at
+		template.email = data.email || "" // optional
+		template.combatStats.name = data.username
+		template.combatStats.player = data.id
 
-		const userDir = join(__dirname, "../db", String(data.id));
+		const userDir = join(__dirname, "../db", String(data.id))
 		if (!fsSync.existsSync(userDir))
-			fsSync.mkdirSync(userDir, { recursive: true });
+			fsSync.mkdirSync(userDir, { recursive: true })
 
 		await fs.writeFile(
 			join(userDir, "player.json"),
 			JSON.stringify(template, null, 2),
-		);
-		console.log(`Player JSON for ${data.id} created!`);
-	},
-};
+		)
 
-export default user;
+		const CtemplatePath = join(__dirname, "../db/characters.template.json")
+		const CtemplateData = await fs.readFile(CtemplatePath, "utf-8")
+		const Ctemplate = JSON.parse(CtemplateData)
+
+		await fs.writeFile(
+			join(userDir, "characters.json"),
+			JSON.stringify(Ctemplate, null, 2),
+		)
+
+		console.log(`Player JSON for ${data.id} created!`)
+	},
+	getCharacterList: async (userId) => {
+		const userDir = join(__dirname, "../db", String(userId))
+		const charactersPath = join(userDir, "characters.json")
+		const charactersData = await fs.readFile(charactersPath, "utf-8")
+		return JSON.parse(charactersData)
+	},
+	login: async (username, password) => {
+		const usersPath = join(__dirname, "../db/users.json")
+		const data = await fs.readFile(usersPath, "utf8")
+		const users = JSON.parse(data)
+		const user = users.find((u) => u.username === username)
+		if (
+			!user ||
+			user.password !== crypto.createHash("md5").update(password).digest("hex")
+		) {
+			return
+		}
+		return user
+	},
+}
+
+export default user

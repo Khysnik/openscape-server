@@ -1,8 +1,8 @@
-import express from 'express';
-import auth from './auth/auth.js';
+import express from "express"
+import auth from "./auth/auth.js"
 
-const api = express.Router();
+const api = express.Router()
 
-api.use('/auth', auth);
+api.use("/auth", auth)
 
-export default api;
+export default api

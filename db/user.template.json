@@ -1,5 +1,5 @@
 {
-	"id": 0,
+	"id": 110297,
 	"state": "ready",
 	"knownInvites": [],
 	"buffs": [],
@@ -8,7 +8,7 @@
 	"offlineStats": [],
 	"sendList": [],
 	"lootlog": [],
-	"lootlogDate": "",
+	"lootlogDate": "2025-10-14T05:44:38.386Z",
 	"explog": [],
 	"chatTimers": {},
 	"lastMarketplaceInteraction": 0,
@@ -298,22 +298,23 @@
 			}
 		]
 	},
-	"username": "",
-	"accountId": 0,
-	"created": "",
+	"username": "Khysnik",
+	"accountId": 37907,
+	"created": "2025-10-14T05:44:38.000Z",
 	"online": true,
-	"loggedOut": "",
+	"loggedOut": "2025-10-14T05:46:01.653Z",
 	"league": 1,
 	"active": true,
 	"seasonClaimed": false,
 	"subscription": {
-		"active": false
+		"active": true,
+		"giftedByName": "INFO"
 	},
 	"verboseLogging": false,
 	"accountStatus": "normal",
 	"platinum": 0,
 	"verifiedEmail": 1,
-	"email": "",
+	"email": "pangea7707@hotmail.com",
 	"2fa_enabled": 0,
 	"claimed": true,
 	"persistentParty": null,
@@ -339,7 +340,16 @@
 		"affixRerollOption": 0,
 		"persistentPartyInventory": 0
 	},
-	"stockpile": [],
+	"stockpile": [
+		{
+			"itemID": 7116,
+			"name": "Marshall the Rat's Gun",
+			"stackSize": 1,
+			"inventoryItemId": 335509991,
+			"id": 345779544,
+			"order": 1
+		}
+	],
 	"vault": [],
 	"equipment": {},
 	"cookingPot": [],
@@ -507,6 +517,13 @@
 			"password": null,
 			"owner": null,
 			"ownerId": null
+		},
+		{
+			"id": 7,
+			"name": "Idlescape Plus",
+			"password": null,
+			"owner": null,
+			"ownerId": null
 		}
 	],
 	"knownAbilities": [1, 3, 2],
@@ -531,8 +548,8 @@
 	"enchantments": [],
 	"affixes": [],
 	"combatStats": {
-		"name": "",
-		"player": 0,
+		"name": "Khysnik",
+		"player": 110297,
 		"attack": 1,
 		"strength": 1,
 		"defense": 1,
@@ -776,7 +793,16 @@
 			"masteryLastReceivedExperience": "2025-10-14T05:44:38.444Z"
 		}
 	},
-	"unlockedIcons": [],
+	"unlockedIcons": [
+		{
+			"iconID": 30,
+			"accountId": 37907
+		},
+		{
+			"iconID": 6,
+			"accountId": 37907
+		}
+	],
 	"tempIcons": [],
 	"bonusLoadoutSlots": 0,
 	"bonusActiveSlots": 0,
@@ -784,7 +810,7 @@
 	"bonusInventoryTabs": 0,
 	"bonusActionQueueCount": 0,
 	"bonusProfileSlots": 0,
-	"platinumSpent": 0,
+	"platinumSpent": 1200,
 	"subsGifted": 0,
 	"farming": {
 		"plot": {},
