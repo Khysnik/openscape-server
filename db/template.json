@@ -1,0 +1,796 @@
+{
+	"id": 0,
+	"state": "ready",
+	"knownInvites": [],
+	"buffs": [],
+	"actionQueue": null,
+	"sessionStats": [],
+	"offlineStats": [],
+	"sendList": [],
+	"lootlog": [],
+	"lootlogDate": "",
+	"explog": [],
+	"chatTimers": {},
+	"lastMarketplaceInteraction": 0,
+	"shrineDonationCooldown": 0,
+	"throwEventCooldown": 0,
+	"questProgress": [
+		{
+			"id": 8001,
+			"stepID": 1,
+			"current": 0
+		},
+		{
+			"id": 11001,
+			"stepID": 1,
+			"current": 0
+		},
+		{
+			"id": 11007,
+			"stepID": 1,
+			"current": 0
+		},
+		{
+			"id": 11012,
+			"stepID": 1,
+			"current": 0
+		},
+		{
+			"id": 11015,
+			"stepID": 1,
+			"current": 0
+		},
+		{
+			"id": 11018,
+			"stepID": 1,
+			"current": 0
+		},
+		{
+			"id": 11021,
+			"stepID": 1,
+			"current": 0
+		},
+		{
+			"id": 11024,
+			"stepID": 1,
+			"current": 0
+		},
+		{
+			"id": 11027,
+			"stepID": 1,
+			"current": 0
+		},
+		{
+			"id": 11030,
+			"stepID": 1,
+			"current": 0
+		},
+		{
+			"id": 11033,
+			"stepID": 1,
+			"current": 0
+		},
+		{
+			"id": 11036,
+			"stepID": 1,
+			"current": 0
+		},
+		{
+			"id": 11039,
+			"stepID": 1,
+			"current": 0
+		},
+		{
+			"id": 11042,
+			"stepID": 1,
+			"current": 0
+		},
+		{
+			"id": 11045,
+			"stepID": 1,
+			"current": 0
+		},
+		{
+			"id": 11048,
+			"stepID": 1,
+			"current": 0
+		},
+		{
+			"id": 11051,
+			"stepID": 1,
+			"current": 0
+		},
+		{
+			"id": 11054,
+			"stepID": 1,
+			"current": 0
+		},
+		{
+			"id": 11062,
+			"stepID": 1,
+			"current": 0
+		},
+		{
+			"id": 11063,
+			"stepID": 1,
+			"current": 0
+		},
+		{
+			"id": 11064,
+			"stepID": 1,
+			"current": 0
+		},
+		{
+			"id": 11065,
+			"stepID": 1,
+			"current": 0
+		},
+		{
+			"id": 11066,
+			"stepID": 1,
+			"current": 0
+		}
+	],
+	"questsCompleted": [],
+	"statCache": {
+		"equipment": {
+			"newKnownAbilities": [1, 3, 2],
+			"newCombatStats": {
+				"name": "Khysnik",
+				"player": 110297,
+				"attack": 0,
+				"strength": 0,
+				"defense": 0,
+				"magic": 0,
+				"range": 0,
+				"constitution": 0,
+				"masteryAttack": 0,
+				"masteryStrength": 0,
+				"masteryDefense": 0,
+				"masteryMagic": 0,
+				"masteryRange": 0,
+				"masteryConstitution": 0,
+				"tempHealth": 0,
+				"maxHealth": 0,
+				"abilities": [
+					{
+						"id": 1
+					}
+				],
+				"attackSpeed": 2.4,
+				"offensiveCritical": {
+					"chance": 0,
+					"damageMultiplier": 0
+				},
+				"defensiveCritical": {
+					"chance": 0,
+					"damageMultiplier": 0
+				},
+				"offensiveDamageAffinity": {},
+				"offensiveAccuracyAffinityRating": {},
+				"defensiveDamageAffinity": {},
+				"armor": {
+					"protection": 0,
+					"resistance": 0,
+					"agility": 0,
+					"stamina": 0
+				},
+				"weapon": {
+					"strength": 0,
+					"intellect": 0,
+					"dexterity": 0
+				},
+				"hitMults": {
+					"minimum": 0.25,
+					"maximum": 1
+				}
+			},
+			"newSkillEquipmentStats": {
+				"farming": 0,
+				"mining": 0,
+				"foraging": 0,
+				"fishing": 0,
+				"enchanting": 0,
+				"runecrafting": 0,
+				"smithing": 0,
+				"crafting": 0,
+				"cooking": 0,
+				"constitution": 0,
+				"attack": 0,
+				"strength": 0,
+				"defense": 0,
+				"magic": 0,
+				"range": 0,
+				"fishingBaitPower": 0,
+				"fishingReelPower": 0,
+				"fishingRarityPower": 0,
+				"researchAttemptsPerFail": 0
+			},
+			"foundEquipment": [],
+			"setBonuses": {},
+			"enchantments": [],
+			"affixes": [],
+			"setEnchantments": [],
+			"talentEnchantments": []
+		},
+		"levels": {
+			"attack": 1,
+			"strength": 1,
+			"defense": 1,
+			"magic": 1,
+			"range": 1,
+			"constitution": 1,
+			"masteryAttack": 0,
+			"masteryStrength": 0,
+			"masteryDefense": 0,
+			"masteryMagic": 0,
+			"masteryRange": 0,
+			"masteryConstitution": 0
+		},
+		"globals": [
+			{
+				"id": 2002,
+				"strength": 4
+			},
+			{
+				"id": 8,
+				"strength": 4
+			},
+			{
+				"id": 77,
+				"strength": 4
+			},
+			{
+				"id": 79,
+				"strength": 4
+			},
+			{
+				"id": 33,
+				"strength": 4
+			},
+			{
+				"id": 32,
+				"strength": 4
+			},
+			{
+				"id": 68,
+				"strength": 4
+			},
+			{
+				"id": 69,
+				"strength": 4
+			},
+			{
+				"id": 30,
+				"strength": 4
+			},
+			{
+				"id": 29,
+				"strength": 4
+			},
+			{
+				"id": 41,
+				"strength": 4
+			},
+			{
+				"id": 42,
+				"strength": 4
+			},
+			{
+				"id": 27,
+				"strength": 4
+			},
+			{
+				"id": 24,
+				"strength": 4
+			},
+			{
+				"id": 39,
+				"strength": 4
+			},
+			{
+				"id": 22,
+				"strength": 4
+			},
+			{
+				"id": 104,
+				"strength": 4
+			}
+		]
+	},
+	"username": "",
+	"accountId": 0,
+	"created": "",
+	"online": true,
+	"loggedOut": "",
+	"league": 1,
+	"active": true,
+	"seasonClaimed": false,
+	"subscription": {
+		"active": false
+	},
+	"verboseLogging": false,
+	"accountStatus": "normal",
+	"platinum": 0,
+	"verifiedEmail": 1,
+	"email": "",
+	"2fa_enabled": 0,
+	"claimed": true,
+	"persistentParty": null,
+	"persistentPartyInventoryID": 0,
+	"persistentPartyClient": {
+		"id": 0,
+		"name": "",
+		"members": [],
+		"ownerId": 0
+	},
+	"persistentPartyJoinRequests": [],
+	"inventoryIds": {
+		"stockpile": 1047581,
+		"vault": 1047582,
+		"equipment": 1047583,
+		"cookingPot": 1047584,
+		"augmentingItemSlot": 1047585,
+		"combatInventory": 1047586,
+		"tacklebox": 1047589,
+		"ammo": 1047587,
+		"scrapQueue": 1047588,
+		"affixRerollSelected": 0,
+		"affixRerollOption": 0,
+		"persistentPartyInventory": 0
+	},
+	"stockpile": [],
+	"vault": [],
+	"equipment": {},
+	"cookingPot": [],
+	"combatInventory": [],
+	"tacklebox": [],
+	"ammo": [],
+	"augmentingItemSlot": [],
+	"scrapQueue": [],
+	"affixRerollSelected": null,
+	"affixRerollOption": null,
+	"persistentPartyInventory": [],
+	"talismans": {},
+	"settings": {
+		"chat": {
+			"fontSize": 14,
+			"showLinks": true,
+			"showRareDrops": true,
+			"showAugmentMessages": true,
+			"showSnowballMessages": true,
+			"showMeMessages": true,
+			"showMyPremiumIcon": true,
+			"profanityFilter": true,
+			"showMobileDate": false,
+			"privateMessageHistoryHours": 1,
+			"helper": false,
+			"chatEventPing": false,
+			"showMyAccountStatus": true,
+			"disableStaffPing": false,
+			"selectedIcon": null,
+			"showAchievementMessages": true,
+			"hideActivityLog": false,
+			"hideGroupChat": false,
+			"hideChat": false
+		},
+		"activityLog": {
+			"notificationsToActivityLog": false,
+			"showFarming": true,
+			"showEnchanting": true,
+			"showActions": true,
+			"showCombatDrops": true,
+			"showCombatMisc": true,
+			"showCombatExp": true,
+			"showFlavorMessages": true,
+			"showEnchantmentProcs": true,
+			"showShardMessages": true,
+			"showQuestProgress": true
+		},
+		"sounds": {
+			"playSoundOnMention": false,
+			"playSoundOnWhisper": false,
+			"playSoundOnInvite": false,
+			"playSoundOnIdle": false,
+			"volume": 5
+		},
+		"combat": {
+			"autoEatThreshold": 50,
+			"maxDifficulty": 3,
+			"startingDifficulty": 0,
+			"forceFullInventory": 1,
+			"showInventoryInGroup": false,
+			"receiveInvitations": 0,
+			"autoRotation": false,
+			"forceValidMerc": true,
+			"ignoreUpdateSafety": false,
+			"dungeonMisclickSafety": true,
+			"dungeonRequeue": false,
+			"dungeonRequeueIgnoreAug": false,
+			"threatProfile": 0,
+			"customThreatMults": false,
+			"hpThreat": 2,
+			"weaponThreat": 3,
+			"damageThreat": 3,
+			"armorThreat": 2,
+			"attackSpeedThreat": 3,
+			"levelThreat": 3,
+			"mercLoadouts": [],
+			"zoneSpecificSettings": {},
+			"dungeonRequeueTargetAugs": [],
+			"compactHealth": false
+		},
+		"tooltips": {
+			"useModernTooltips": false,
+			"useCompactTooltips": false,
+			"useEquipComparison": false
+		},
+		"miscellaneous": {
+			"sendLikeToVault": false,
+			"sendLikeToTacklebox": false,
+			"useLegacySorting": false,
+			"sortByValue": true,
+			"highPerformance": false,
+			"pinnedTabs": [],
+			"usePinnedTabs": false,
+			"showCurrencyAsItems": false,
+			"showEmptyMarketManifest": false,
+			"showQueueButton": true,
+			"queueRepeat": false,
+			"inventoryTabRules": {},
+			"inventoryTabNames": {
+				"0": "Default Tab"
+			},
+			"inventoryTabOrder": [],
+			"userActionQueue": [],
+			"selectedTalents": [],
+			"blacklistedBuffs": [],
+			"skipScholarWarning": false,
+			"skipWealthWarning": false,
+			"autoSellJunk": false,
+			"showActionQueueTab": false,
+			"showUnfundedShrine": true,
+			"showInventoryFiltersByDefault": true,
+			"showVendorButtonMultiSelect": false
+		},
+		"quest": {
+			"pin": null
+		},
+		"cooking": {
+			"sort": 0,
+			"hidebuffs": false
+		},
+		"augmenting": {
+			"maxAugmentLevel": 0,
+			"sortSuccessfulToStart": true
+		},
+		"cosmetic": {
+			"selectedCosmetics": {},
+			"unlockedCosmetics": [7116],
+			"profileVisibility": 0,
+			"profileIcons": [],
+			"profileCosmetics": {},
+			"itemShowcase": [],
+			"hiscoreShowcase": [],
+			"achievementShowcase": [],
+			"dungeonShowcase": [],
+			"chestShowcase": [],
+			"backgroundLocation": 1001
+		},
+		"privacy": {
+			"optOutFromDataRelease": false,
+			"hideOnlineStatus": false,
+			"hideOnlineStatusNonFriends": true
+		},
+		"security": {
+			"email": ""
+		}
+	},
+	"chatChannels": [
+		{
+			"id": 2,
+			"name": "Trade",
+			"password": null,
+			"owner": null,
+			"ownerId": null
+		},
+		{
+			"id": 1,
+			"name": "General",
+			"password": null,
+			"owner": null,
+			"ownerId": null
+		},
+		{
+			"id": 3,
+			"name": "Help",
+			"password": null,
+			"owner": null,
+			"ownerId": null
+		}
+	],
+	"knownAbilities": [1, 3, 2],
+	"learnedAbilities": [1, 3, 2],
+	"loadouts": [],
+	"marketplacePurchaseCooldowns": {},
+	"myReferralCode": "b52b2c143dc8db6ee52fa39f",
+	"targetReferralCode": "859f73024965b2fbabde1608",
+	"claimedTiers": [1, 1, 1],
+	"claimedReferralPoints": [0, 0, 0, 0, 0],
+	"friendList": [],
+	"lastRefreshedFriends": "2025-10-14T05:44:54.206Z",
+	"blockList": [],
+	"tradeban": "2025-10-14T05:44:38.396Z",
+	"tradebanReason": "Not tradebanned",
+	"ban": "2025-10-14T05:44:38.397Z",
+	"banReason": "Not banned",
+	"muted": "2022-12-21T04:29:08.000Z",
+	"mutedReason": "Spam",
+	"unreadNotes": [],
+	"eliteChallenges": {},
+	"enchantments": [],
+	"affixes": [],
+	"combatStats": {
+		"name": "",
+		"player": 0,
+		"attack": 1,
+		"strength": 1,
+		"defense": 1,
+		"magic": 1,
+		"range": 1,
+		"constitution": 1,
+		"masteryAttack": 0,
+		"masteryStrength": 0,
+		"masteryDefense": 0,
+		"masteryMagic": 0,
+		"masteryRange": 0,
+		"masteryConstitution": 0,
+		"tempHealth": 0,
+		"maxHealth": 300,
+		"abilities": [
+			{
+				"id": 1
+			}
+		],
+		"attackSpeed": 2.4,
+		"offensiveCritical": {
+			"chance": 0,
+			"damageMultiplier": 0
+		},
+		"defensiveCritical": {
+			"chance": 0,
+			"damageMultiplier": 0
+		},
+		"offensiveDamageAffinity": {},
+		"offensiveAccuracyAffinityRating": {},
+		"defensiveDamageAffinity": {},
+		"armor": {
+			"protection": 0,
+			"resistance": 0,
+			"agility": 0,
+			"stamina": 0
+		},
+		"weapon": {
+			"strength": 0,
+			"intellect": 0,
+			"dexterity": 0
+		},
+		"hitMults": {
+			"minimum": 0.25,
+			"maximum": 1
+		}
+	},
+	"skillEquipmentStats": {
+		"farming": 0,
+		"mining": 0,
+		"foraging": 0,
+		"fishing": 0,
+		"enchanting": 0,
+		"runecrafting": 0,
+		"smithing": 0,
+		"crafting": 0,
+		"cooking": 0,
+		"constitution": 0,
+		"attack": 0,
+		"strength": 0,
+		"defense": 0,
+		"magic": 0,
+		"range": 0,
+		"fishingBaitPower": 0,
+		"fishingReelPower": 0,
+		"fishingRarityPower": 0,
+		"researchAttemptsPerFail": 0
+	},
+	"currentHealth": 300,
+	"foodCooldown": 0,
+	"lootGoblinCheck": {},
+	"userActionQueueStart": false,
+	"groupInvites": [],
+	"groupId": "group:110297-1760420694187",
+	"vendorPurchases": [],
+	"timeSinceLastGlobalBuff": 1760419678405,
+	"vacationExpires": "1970-01-01T00:00:01.970Z",
+	"shrineContribution": {
+		"shrineCycle": 74,
+		"progress": -1
+	},
+	"skills": {
+		"mining": {
+			"id": 3236460,
+			"level": 1,
+			"experience": 0,
+			"lastReceivedExperience": "2025-10-14T05:44:38.412Z",
+			"masteryId": 3236461,
+			"masteryLevel": 0,
+			"masteryExperience": 13034431,
+			"masteryLastReceivedExperience": "2025-10-14T05:44:38.413Z"
+		},
+		"smithing": {
+			"id": 3236462,
+			"level": 1,
+			"experience": 0,
+			"lastReceivedExperience": "2025-10-14T05:44:38.414Z",
+			"masteryId": 3236463,
+			"masteryLevel": 0,
+			"masteryExperience": 13034431,
+			"masteryLastReceivedExperience": "2025-10-14T05:44:38.416Z"
+		},
+		"fishing": {
+			"id": 3236464,
+			"level": 1,
+			"experience": 0,
+			"lastReceivedExperience": "2025-10-14T05:44:38.417Z",
+			"masteryId": 3236465,
+			"masteryLevel": 0,
+			"masteryExperience": 13034431,
+			"masteryLastReceivedExperience": "2025-10-14T05:44:38.418Z"
+		},
+		"foraging": {
+			"id": 3236466,
+			"level": 1,
+			"experience": 0,
+			"lastReceivedExperience": "2025-10-14T05:44:38.419Z",
+			"masteryId": 3236467,
+			"masteryLevel": 0,
+			"masteryExperience": 13034431,
+			"masteryLastReceivedExperience": "2025-10-14T05:44:38.420Z"
+		},
+		"farming": {
+			"id": 3236468,
+			"level": 1,
+			"experience": 0,
+			"lastReceivedExperience": "2025-10-14T05:44:38.421Z",
+			"masteryId": 3236469,
+			"masteryLevel": 0,
+			"masteryExperience": 13034431,
+			"masteryLastReceivedExperience": "2025-10-14T05:44:38.422Z"
+		},
+		"enchanting": {
+			"id": 3236470,
+			"level": 1,
+			"experience": 0,
+			"lastReceivedExperience": "2025-10-14T05:44:38.423Z",
+			"masteryId": 3236471,
+			"masteryLevel": 0,
+			"masteryExperience": 13034431,
+			"masteryLastReceivedExperience": "2025-10-14T05:44:38.424Z"
+		},
+		"runecrafting": {
+			"id": 3236472,
+			"level": 1,
+			"experience": 0,
+			"lastReceivedExperience": "2025-10-14T05:44:38.425Z",
+			"masteryId": 3236473,
+			"masteryLevel": 0,
+			"masteryExperience": 13034431,
+			"masteryLastReceivedExperience": "2025-10-14T05:44:38.426Z"
+		},
+		"crafting": {
+			"id": 3236474,
+			"level": 1,
+			"experience": 0,
+			"lastReceivedExperience": "2025-10-14T05:44:38.427Z",
+			"masteryId": 3236475,
+			"masteryLevel": 0,
+			"masteryExperience": 13034431,
+			"masteryLastReceivedExperience": "2025-10-14T05:44:38.429Z"
+		},
+		"cooking": {
+			"id": 3236476,
+			"level": 1,
+			"experience": 0,
+			"lastReceivedExperience": "2025-10-14T05:44:38.430Z",
+			"masteryId": 3236477,
+			"masteryLevel": 0,
+			"masteryExperience": 13034431,
+			"masteryLastReceivedExperience": "2025-10-14T05:44:38.430Z"
+		},
+		"constitution": {
+			"id": 3236478,
+			"level": 1,
+			"experience": 0,
+			"lastReceivedExperience": "2025-10-14T05:44:38.431Z",
+			"masteryId": 3236479,
+			"masteryLevel": 0,
+			"masteryExperience": 13034431,
+			"masteryLastReceivedExperience": "2025-10-14T05:44:38.432Z"
+		},
+		"attack": {
+			"id": 3236480,
+			"level": 1,
+			"experience": 0,
+			"lastReceivedExperience": "2025-10-14T05:44:38.433Z",
+			"masteryId": 3236481,
+			"masteryLevel": 0,
+			"masteryExperience": 13034431,
+			"masteryLastReceivedExperience": "2025-10-14T05:44:38.434Z"
+		},
+		"strength": {
+			"id": 3236482,
+			"level": 1,
+			"experience": 0,
+			"lastReceivedExperience": "2025-10-14T05:44:38.435Z",
+			"masteryId": 3236483,
+			"masteryLevel": 0,
+			"masteryExperience": 13034431,
+			"masteryLastReceivedExperience": "2025-10-14T05:44:38.436Z"
+		},
+		"defense": {
+			"id": 3236484,
+			"level": 1,
+			"experience": 0,
+			"lastReceivedExperience": "2025-10-14T05:44:38.437Z",
+			"masteryId": 3236485,
+			"masteryLevel": 0,
+			"masteryExperience": 13034431,
+			"masteryLastReceivedExperience": "2025-10-14T05:44:38.438Z"
+		},
+		"total": {
+			"id": 3236486,
+			"level": 15,
+			"experience": 0,
+			"lastReceivedExperience": "2025-10-14T05:44:38.439Z",
+			"masteryId": 3236487,
+			"masteryLevel": 0,
+			"masteryExperience": 0,
+			"masteryLastReceivedExperience": "2025-10-14T05:44:38.440Z"
+		},
+		"magic": {
+			"id": 3236488,
+			"level": 1,
+			"experience": 0,
+			"lastReceivedExperience": "2025-10-14T05:44:38.441Z",
+			"masteryId": 3236489,
+			"masteryLevel": 0,
+			"masteryExperience": 13034431,
+			"masteryLastReceivedExperience": "2025-10-14T05:44:38.442Z"
+		},
+		"range": {
+			"id": 3236490,
+			"level": 1,
+			"experience": 0,
+			"lastReceivedExperience": "2025-10-14T05:44:38.443Z",
+			"masteryId": 3236491,
+			"masteryLevel": 0,
+			"masteryExperience": 13034431,
+			"masteryLastReceivedExperience": "2025-10-14T05:44:38.444Z"
+		}
+	},
+	"unlockedIcons": [],
+	"tempIcons": [],
+	"bonusLoadoutSlots": 0,
+	"bonusActiveSlots": 0,
+	"bonusCharacterSlots": 0,
+	"bonusInventoryTabs": 0,
+	"bonusActionQueueCount": 0,
+	"bonusProfileSlots": 0,
+	"platinumSpent": 0,
+	"subsGifted": 0,
+	"farming": {
+		"plot": {},
+		"height": 1,
+		"width": 2
+	},
+	"farmingShardProgress": 0,
+	"farmingSpacesOpen": 2
+}
