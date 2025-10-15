@@ -3,6 +3,8 @@ import { fileURLToPath } from "node:url"
 import crypto from "crypto"
 import fsSync from "fs"
 import fs from "fs/promises"
+import { locations } from "../tables/locationList.js"
+import table from "./table.js"
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -103,6 +105,80 @@ const user = {
 			return
 		}
 		return user
+	},
+	getData: async (userId) => {
+		const userDir = join(__dirname, "../db", String(userId))
+		const playerPath = join(userDir, "player.json")
+		const playerData = await fs.readFile(playerPath, "utf-8")
+		return JSON.parse(playerData)
+	},
+	addLoot: async (socket, userId, action, loot) => {
+		const userDir = join(__dirname, "../db", String(userId))
+		const templatePath = join(userDir, "player.json")
+		const templateData = await fs.readFile(templatePath, "utf-8")
+		const template = JSON.parse(templateData)
+
+		template.stockpile = template.stockpile || []
+
+		let lootObject
+		const existingItem = template.stockpile.find(
+			(item) => item.itemID === loot.id,
+		)
+
+		if (existingItem) {
+			existingItem.stackSize += loot.amount
+			lootObject = existingItem
+			socket.emit("update:inventory", {
+				inventory: "stockpile",
+				changedItems: [{ job: "MODIFY", item: lootObject }],
+			})
+		} else {
+			lootObject = {
+				itemID: loot.id,
+				name: table.itemData(loot.id).name,
+				stackSize: loot.amount,
+				inventoryItemId: Math.floor(Math.random() * 999999999),
+				id: Math.floor(Math.random() * 999999999),
+				order: 1,
+			}
+			template.stockpile.push(lootObject)
+			socket.emit("update:inventory", {
+				inventory: "stockpile",
+				changedItems: [{ job: "ADD", item: lootObject }],
+			})
+		}
+
+		template.leaderId = userId
+
+		const location = locations[action.location]
+		if (location?.xpPerCompletion?.length) {
+			location.xpPerCompletion.forEach((xp) => {
+				const skill = template.skills[xp.skill]
+				if (skill) {
+					skill.experience += xp.amount
+				}
+			})
+
+			template.skills.total.experience = Object.values(template.skills).reduce(
+				(sum, s) => (sum.experience ? sum + s.experience : sum),
+				0,
+			)
+
+			const updatedSkills = {}
+			Object.entries(template.skills).forEach(([key, val]) => {
+				updatedSkills[key] = {
+					...val,
+					lastReceivedExperience: new Date().toISOString(),
+				}
+			})
+
+			socket.emit("update:player:paths", {
+				key: "skills",
+				value: updatedSkills,
+			})
+		}
+
+		await fs.writeFile(templatePath, JSON.stringify(template, null, 2))
 	},
 }
 

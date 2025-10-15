@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser"
 import express from "express"
 import jwt from "jsonwebtoken"
 import { Server } from "socket.io"
+import loop from "./game/startLoop.js"
 import routes from "./routes/routes.js"
 import initPlayer from "./socket/initPlayer.js"
 import user from "./state/user.js"
@@ -40,6 +41,23 @@ io.on("connection", (socket) => {
 		socket.on("session:start:socket:ready:client", (ver) => {
 			console.log("Client ready to start session:", ver)
 			initPlayer(socket, decoded)
+		})
+
+		socket.on("action:start", (action) => {
+			loop.start(socket, decoded, action)
+		})
+
+		socket.on("disconnect", () => {
+			loop.stop(decoded.id)
+		})
+
+		socket.on("action:stop", () => {
+			loop.stop(decoded.id)
+			socket.emit("update:player", { portion: "actionQueue", value: null })
+			socket.emit("update:player", {
+				portion: "userActionQueueStart",
+				value: false,
+			})
 		})
 	} catch (err) {
 		socket.disconnect(true)

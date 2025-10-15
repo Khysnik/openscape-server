@@ -1,18 +1,15 @@
 {
-	"key": "settings",
-	"value": {
-		"cosmetic": {
-			"selectedCosmetics": {},
-			"unlockedCosmetics": [],
-			"profileVisibility": 0,
-			"profileIcons": [],
-			"profileCosmetics": {},
-			"itemShowcase": [],
-			"hiscoreShowcase": [],
-			"achievementShowcase": [],
-			"dungeonShowcase": [],
-			"chestShowcase": [],
-			"backgroundLocation": 0
-		}
+	"cosmetic": {
+		"selectedCosmetics": {},
+		"unlockedCosmetics": [],
+		"profileVisibility": 0,
+		"profileIcons": [],
+		"profileCosmetics": {},
+		"itemShowcase": [],
+		"hiscoreShowcase": [],
+		"achievementShowcase": [],
+		"dungeonShowcase": [],
+		"chestShowcase": [],
+		"backgroundLocation": 0
 	}
 }
