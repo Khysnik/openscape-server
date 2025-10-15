@@ -1,0 +1,67 @@
+{
+	"groupId": "group",
+	"leaderId": 0,
+	"groupMemberData": [
+		{
+			"id": 0,
+			"username": "NewPlayer",
+			"role": "dps",
+			"ready": false,
+			"equipment": {},
+			"combatStats": {
+				"name": "NewPlayer",
+				"player": 0,
+				"attack": 1,
+				"strength": 1,
+				"defense": 1,
+				"magic": 1,
+				"range": 1,
+				"constitution": 1,
+				"masteryAttack": 0,
+				"masteryStrength": 0,
+				"masteryDefense": 0,
+				"masteryMagic": 0,
+				"masteryRange": 0,
+				"masteryConstitution": 0,
+				"tempHealth": 0,
+				"maxHealth": 100,
+				"abilities": [{ "id": 1 }],
+				"attackSpeed": 2.4,
+				"offensiveCritical": {
+					"chance": 0,
+					"damageMultiplier": 0
+				},
+				"defensiveCritical": {
+					"chance": 0,
+					"damageMultiplier": 0
+				},
+				"offensiveDamageAffinity": {},
+				"offensiveAccuracyAffinityRating": {
+					"Melee": 1.0,
+					"Magic": 1.0,
+					"Range": 1.0
+				},
+				"defensiveDamageAffinity": {},
+				"armor": {
+					"protection": 0,
+					"resistance": 0,
+					"agility": 0,
+					"stamina": 0
+				},
+				"weapon": {
+					"strength": 0,
+					"intellect": 0,
+					"dexterity": 0
+				},
+				"hitMults": {
+					"minimum": 0.25,
+					"maximum": 1
+				}
+			},
+			"currentHealth": 100,
+			"selectedCosmetics": {}
+		}
+	],
+	"maxSize": 10,
+	"status": null
+}

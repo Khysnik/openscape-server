@@ -59,6 +59,30 @@ const user = {
 			JSON.stringify(Ctemplate, null, 2),
 		)
 
+		const GtemplatePath = join(__dirname, "../db/group.template.json")
+		const GtemplateData = await fs.readFile(GtemplatePath, "utf-8")
+		const Gtemplate = JSON.parse(GtemplateData)
+
+		Gtemplate.leaderId = data.id
+		Gtemplate.groupMemberData[0].username = data.username
+		Gtemplate.groupMemberData[0].id = data.id
+		Gtemplate.groupMemberData[0].combatStats.name = data.username
+		Gtemplate.groupMemberData[0].combatStats.player = data.id
+
+		await fs.writeFile(
+			join(userDir, "group.json"),
+			JSON.stringify(Gtemplate, null, 2),
+		)
+
+		const StemplatePath = join(__dirname, "../db/settings.template.json")
+		const StemplateData = await fs.readFile(StemplatePath, "utf-8")
+		const Stemplate = JSON.parse(StemplateData)
+
+		await fs.writeFile(
+			join(userDir, "settings.json"),
+			JSON.stringify(Stemplate, null, 2),
+		)
+
 		console.log(`Player JSON for ${data.id} created!`)
 	},
 	getCharacterList: async (userId) => {

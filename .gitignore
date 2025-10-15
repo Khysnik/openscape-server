@@ -8,5 +8,4 @@ biome.json
 
 nodemon.json
 
-**/characters.json
-**/player.json
+db/*/

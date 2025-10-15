@@ -1,0 +1,55 @@
+{
+	"buffs": [],
+	"marketplaceEnabled": true,
+	"marketplaceListItems": true,
+	"marketplaceBuyListings": true,
+	"marketplaceCreateOffers": true,
+	"tradeChannelSlowmode": 10000,
+	"globalSlowmode": 500,
+	"globalFloodLevel": 50,
+	"allowConnections": true,
+
+	"characterOnlineData": {
+		"online": {
+			"1": 1,
+			"2": 0,
+			"3": 0,
+			"6": 0,
+			"7": 0,
+			"8": 0,
+			"9": 0,
+			"10": 0,
+			"11": 0,
+			"12": 0
+		},
+		"registered": {
+			"1": 1,
+			"2": 0,
+			"3": 0,
+			"6": 0,
+			"7": 0,
+			"8": 0,
+			"9": 0,
+			"10": 0,
+			"11": 0,
+			"12": 0
+		},
+		"time": "",
+		"globalActivity": {
+			"activity": {}
+		}
+	},
+
+	"updateTime": -1,
+	"updateString": "",
+
+	"shrines": {},
+	"shrineCycle": 0,
+	"shrineCostModifier": {},
+	"madnessTheme": "none",
+	"inactiveSkills": [],
+	"platinumShopEnabled": true,
+	"onlyVerifiedChatters": false,
+
+	"levelMilestones": {}
+}

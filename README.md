@@ -21,7 +21,7 @@ Roadmap:
 - [x] Account register/login
 - [x] JWT Token
 - [x] Characters list, creation, deletion
-- [ ] Socket initialization, send paths, player, globals, group data, and shine info on connect
+- [x] Socket initialization, send paths, player, globals, group data, and shine info on connect
 - [ ] Game chat with message history
 - [ ] Socket Events:
   - [ ] send: animation:resume

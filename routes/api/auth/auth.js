@@ -96,7 +96,7 @@ auth.post("/create-character", (req, res) => {
 			gold: 0,
 			heat: 0,
 			action: "Idling",
-			lastLoggedInString: "now",
+			lastLoggedInString: "0 seconds",
 			totalLevel: 15,
 			masteryLevel: 0,
 			active: true,
@@ -123,7 +123,10 @@ auth.post("/create-character", (req, res) => {
 auth.post("/character-info", (req, res) => {
 	if (!req.cookies.token) return res.status(401).send("Unauthorized")
 	jwt.verify(req.cookies.token, "suspass", async (err, decoded) => {
-		if (err) return res.status(401).send("Unauthorized")
+		if (err) {
+			res.clearCookie("token")
+			return res.status(401).send("Unauthorized")
+		}
 		console.log(await user.getCharacterList(decoded.id))
 		res.send(await user.getCharacterList(decoded.id))
 	})
