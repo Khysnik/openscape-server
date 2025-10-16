@@ -9,6 +9,11 @@ const loop = {
 		this.stop(data.id) // stop existing loop
 		const userData = await user.getData(data.id)
 
+		let node = {}
+		let isNode = 0
+
+		if (locations[action.location]?.nodes) isNode = 1
+
 		socket.emit("update:player", {
 			portion: "actionQueue",
 			value: {
@@ -32,17 +37,33 @@ const loop = {
 				userData.skills[action.action].masteryLevel
 			const interval = (baseInterval / (99 + totalLevel)) * 100
 
-			const result = tick(action)
+			const result = tick(action, isNode, node)
 
 			if (result.loot) {
 				await user.addLoot(socket, data.id, action, result.loot)
 			}
 
-			socket.emit("animation:start", {
-				action: table.action(action.action),
-				location: action.location,
-				length: interval,
-			})
+			if (result.node) {
+				node = result.node
+				socket.emit("animation:start", {
+					action: table.action(action.action),
+					location: action.location,
+					length: interval,
+					node: {
+						nodeID: node.data.nodeID,
+						initialResources: node.reps,
+						resourcesLeft: node.count,
+						searchPenalty: 0,
+						findFails: 0,
+					},
+				})
+			} else {
+				socket.emit("animation:start", {
+					action: table.action(action.action),
+					location: action.location,
+					length: interval,
+				})
+			}
 
 			// schedule the next tick dynamically
 			const loopID = setTimeout(runLoop, interval)
