@@ -6,7 +6,7 @@ import tick from "./tick.js"
 
 const loop = {
 	async start(socket, data, action) {
-		this.stop(data.id)
+		this.stop(data.id) // stop existing loop
 		const userData = await user.getData(data.id)
 
 		socket.emit("update:player", {
@@ -25,37 +25,40 @@ const loop = {
 			},
 		})
 
-		let baseInterval = locations[action.location].baseDuration
-		let totalLevel =
-			userData.skills[action.action].level +
-			userData.skills[action.action].masteryLevel
+		const runLoop = async () => {
+			const baseInterval = locations[action.location].baseDuration
+			const totalLevel =
+				userData.skills[action.action].level +
+				userData.skills[action.action].masteryLevel
+			const interval = (baseInterval / (99 + totalLevel)) * 100
 
-		let interval = (baseInterval / (99 + totalLevel)) * 100
-		socket.emit("animation:start", {
-			action: table.action(action.action),
-			location: action.location,
-			length: interval,
-		})
-		const loopID = setInterval(() => {
-			let result = tick(action)
+			const result = tick(action)
 
 			if (result.loot) {
-				user.addLoot(socket, data.id, action, result.loot)
+				await user.addLoot(socket, data.id, action, result.loot)
 			}
+
 			socket.emit("animation:start", {
 				action: table.action(action.action),
 				location: action.location,
 				length: interval,
 			})
-		}, interval)
 
-		activeActions.set(data.id, loopID)
+			// schedule the next tick dynamically
+			const loopID = setTimeout(runLoop, interval)
+			activeActions.set(data.id, loopID)
+		}
+
+		runLoop()
 	},
 
 	stop(id) {
-		clearInterval(activeActions.get(id))
-		activeActions.delete(id)
-		console.log(`Action loop with ID ${id} stopped.`)
+		const loopID = activeActions.get(id)
+		if (loopID) {
+			clearTimeout(loopID)
+			activeActions.delete(id)
+			console.log(`Action loop with ID ${id} stopped.`)
+		}
 	},
 }
 

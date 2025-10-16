@@ -8,6 +8,14 @@ import table from "./table.js"
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
+function xpToLevel(level) {
+	let totalXP = 0
+	for (let x = 1; x < level; x++) {
+		totalXP += Math.floor(x + 300 * Math.pow(2, x / 7))
+	}
+	return Math.floor(totalXP / 4)
+}
+
 const user = {
 	register: async (username, password, email) => {
 		const usersPath = join(__dirname, "../db/users.json")
@@ -29,7 +37,6 @@ const user = {
 
 		return info
 	},
-
 	reset: async (data) => {
 		const templatePath = join(__dirname, "../db/user.template.json")
 		const templateData = await fs.readFile(templatePath, "utf-8")
@@ -156,6 +163,10 @@ const user = {
 				const skill = template.skills[xp.skill]
 				if (skill) {
 					skill.experience += xp.amount
+
+					while (skill.experience >= xpToLevel(skill.level + 1)) {
+						skill.level += 1
+					}
 				}
 			})
 
